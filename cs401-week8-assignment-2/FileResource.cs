@@ -17,11 +17,13 @@ public class FileResource : Resource, IDisposable
     {
         if (!IsOpen)
         {
-            throw new ArgumentException("File is not opened!");
+            Console.WriteLine($"{Name} is not opened!");
         }
-
-        IsOpen = false;
-        Console.WriteLine($"{Name} has been closed");
+        else
+        {
+            IsOpen = false;
+            Console.WriteLine($"{Name} has been closed");
+        }
     }
 
     public void Dispose()
