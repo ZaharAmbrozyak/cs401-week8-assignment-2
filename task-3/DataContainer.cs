@@ -11,7 +11,7 @@ public class DataContainer<T> where T: DataItem
 
     public long GetTotalSize()
     {
-        var totalSize = 0;
+        long totalSize = 0;
         foreach (var item in _data)
         {
             totalSize += item.GetSize();
