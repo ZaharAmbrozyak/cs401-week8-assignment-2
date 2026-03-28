@@ -4,6 +4,7 @@ class Program
 {
     static void Main(string[] args)
     {
+        // при створенні нового struct, ми робимо копію даних у памяті
         var point1 = new Point(1, 1);
         var point2 = point1;
 
@@ -14,6 +15,7 @@ class Program
         point2.Print();
         Console.Write("\n");
         
+        // тут вже йдуть класи, і reference2 отримує посилання на reference1, а не повну копію даних
         var reference1 = new PointRef(2, 2);
         var reference2 = reference1;
 
@@ -22,8 +24,7 @@ class Program
         Console.WriteLine("Both X values has been changed!");
         reference1.Print();
         reference2.Print();
-
-        var boxingTester = new BoxingTester();
-        boxingTester.Test();
+        
+        BoxingTester.Test();
     }
 }
