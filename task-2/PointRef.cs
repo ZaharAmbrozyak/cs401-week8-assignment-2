@@ -9,4 +9,10 @@ public class PointRef
     {
         Console.WriteLine($"PointRef. X: {X}, Y: {Y}");
     }
+
+    public PointRef(int x, int y)
+    {
+        X = x;
+        Y = y;
+    }
 }
