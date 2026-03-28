@@ -9,7 +9,7 @@ public class DataContainer<T> where T: DataItem
         _data.Add(item);
     }
 
-    public int GetTotalSize()
+    public long GetTotalSize()
     {
         var totalSize = 0;
         foreach (var item in _data)
